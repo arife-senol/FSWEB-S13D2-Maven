@@ -48,7 +48,48 @@ public class Main {
         }
     }
     public static String numberToWords (int number){
-        return "" ;
+        if(number<0){
+            return "Invalid Value";
+        }
+        String result = "";
+        String strNumber = String.valueOf(number);
+        for (int i = 0; i <strNumber.length() ; i++) {
+            switch (strNumber.charAt(i)){
+                case '1' :
+                    result += "One ";
+                    break;
+                case '2'  :
+                    result += "Two ";
+                    break;
+                case '3'  :
+                    result += "Three ";
+                    break;
+                case '4'  :
+                    result += "Four ";
+                    break;
+                case '5'  :
+                    result += "Five ";
+                    break;
+                case '6'  :
+                    result += "Six ";
+                    break;
+                case '7'  :
+                    result += "Seven ";
+                    break;
+                case '8'  :
+                    result += "Eight ";
+                    break;
+                case '9'  :
+                    result += "Nine ";
+                    break;
+                case '0'  :
+                    result += "Zero ";
+                    break;
+            }
+        }
+
+        return result.trim();
+
     }
 
 
