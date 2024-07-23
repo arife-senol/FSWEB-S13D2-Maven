@@ -29,8 +29,23 @@ public class Main {
     }
 
 
-    public static boolean isPerfectNumber (int number){
-        return true;
+    public static boolean isPerfectNumber(int number) {
+        int total = 1;
+        if (number < 0) {
+            return false;
+        }
+
+        for (int i = 2; i < number; i++) {
+            if (number % i == 0) {
+                total += i;
+            }
+        }
+
+        if (number == total) {
+            return true;
+        } else {
+            return false;
+        }
     }
     public static String numberToWords (int number){
         return "" ;
